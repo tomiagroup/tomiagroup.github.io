@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOMIA GROUP | IT ľudskou rečou</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --forest:#002d1b;
+  --gold:#d4ab68;
+  --deep-green:#1f483a;
+  --cream:#fffcf6;
+  --dark-text:#030504;
+  --light-gold:#edcf89;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Titillium Web',sans-serif;
+  background:var(--cream);
+  color:var(--dark-text);
+  line-height:1.6;
+}
+
+/* TYPOGRAPHY */
+h1{font-size:60px;font-weight:700;line-height:1.1;}
+h2{font-size:34px;font-weight:700;}
+h3{font-size:22px;font-weight:600;}
+p{font-size:16px;font-weight:300;}
+
+.container{max-width:1200px;margin:auto;padding:0 20px;}
+
+/* HEADER */
+header{
+  position:fixed;
+  width:100%;
+  background:var(--forest);
+  padding:20px 0;
+  z-index:1000;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-weight:700;
+  font-size:20px;
+  color:var(--gold);
+}
+nav a{
+  text-decoration:none;
+  color:var(--cream);
+  margin-left:30px;
+  font-weight:600;
+  position:relative;
+}
+nav a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:var(--gold);
+  transition:.3s;
+}
+nav a:hover::after{width:100%;}
+
+/* HERO */
+.hero{
+  background:var(--forest);
+  color:var(--cream);
+  padding:160px 0 120px;
+}
+.hero h1{color:var(--gold);}
+.hero p{
+  margin:30px 0;
+  max-width:600px;
+  font-size:20px;
+}
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:4px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn-gold{
+  background:var(--gold);
+  color:var(--forest);
+}
+.btn-gold:hover{
+  background:#c0842a;
+  color:white;
+}
+
+/* SECTIONS */
+.section{padding:100px 0;}
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+.section-title h2::after{
+  content:'';
+  width:60px;
+  height:4px;
+  background:var(--gold);
+  display:block;
+  margin:20px auto 0;
+  border-radius:2px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+/* CARDS */
+.card{
+  background:white;
+  padding:40px 30px;
+  border-left:4px solid var(--gold);
+  border-radius:6px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.05);
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+.icon{
+  font-size:34px;
+  color:var(--gold);
+  margin-bottom:20px;
+}
+.card h3{margin-bottom:12px;color:var(--forest);}
+
+/* TESTIMONIALS */
+.testimonial{
+  background:white;
+  padding:30px;
+  border-radius:6px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:.3s;
+}
+.testimonial:hover{transform:translateY(-4px);}
+.quote{
+  font-size:26px;
+  color:var(--forest);
+  opacity:.15;
+  margin-bottom:10px;
+}
+.testimonial p{
+  font-style:italic;
+  font-size:18px;
+  margin-bottom:12px;
+}
+
+/* CTA */
+.cta{
+  background:var(--gold);
+  color:var(--forest);
+  text-align:center;
+  padding:80px 20px;
+}
+.cta .btn{
+  background:var(--forest);
+  color:white;
+  margin-top:20px;
+}
+.cta .btn:hover{background:var(--deep-green);}
+
+/* FOOTER */
+footer{
+  background:var(--forest);
+  color:var(--light-gold);
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  h1{font-size:40px;}
+  .hero{padding:140px 0 90px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">TOMIA GROUP</div>
+      <div>
+        <a href="#produkty">Produkty</a>
+        <a href="#referencie">Referencie</a>
+        <a href="#kontakt">Konzultácia</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>IT ľudskou rečou.<br>Vrátime vášmu biznisu čas.</h1>
+    <p>AI riešenia, automatizácie a Dynamics 365 implementácie, ktoré eliminujú rutinu a dávajú poriadok do firmy.</p>
+    <a href="#kontakt" class="btn btn-gold">Rezervovať konzultáciu</a>
+  </div>
+</section>
+
+<section class="section" id="produkty">
+  <div class="container">
+    <div class="section-title">
+      <h2>Čo robíme</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <i class="fa-solid fa-brain icon"></i>
+        <h3>AI riešenia</h3>
+        <p>Automatické spracovanie dokumentov, email asistenti a inteligentné workflow.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-gears icon"></i>
+        <h3>Automatizácie</h3>
+        <p>Procesy, ktoré bežia 24/7 bez chýb a ručnej práce.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-diagram-project icon"></i>
+        <h3>Dynamics 365</h3>
+        <p>CRM centrum firmy – predaj, zákazníci a dáta na jednom mieste.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-chart-line icon"></i>
+        <h3>Power BI</h3>
+        <p>Dashboardy, ktoré vám okamžite ukážu stav biznisu.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-graduation-cap icon"></i>
+        <h3>Vzdelávanie</h3>
+        <p>Praktické workshopy o AI a automatizáciách.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="referencie">
+  <div class="container">
+    <div class="section-title">
+      <h2>Referencie</h2>
+    </div>
+    <div class="grid">
+      <div class="testimonial">
+        <i class="fa-solid fa-quote-left quote"></i>
+        <p>"Firmu TOMIA potrebuje každý podnikateľ, ktorého nebavia tabuľky."</p>
+        <strong>Monika Potfajová</strong>
+      </div>
+      <div class="testimonial">
+        <i class="fa-solid fa-quote-left quote"></i>
+        <p>"Demo CRM mi pomohlo rýchlo sa rozhodnúť."</p>
+        <strong>Radoslav Čajka</strong>
+      </div>
+      <div class="testimonial">
+        <i class="fa-solid fa-quote-left quote"></i>
+        <p>"Spoluprácu hodnotím 10 z 10."</p>
+        <strong>Ailin Hanková</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="kontakt">
+  <div class="container">
+    <h2>Prvá konzultácia zadarmo</h2>
+    <p>Bez záväzkov. Bez technického balastu. Len rozhovor o riešení.</p>
+    <a href="#" class="btn">Rezervovať konzultáciu</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 TOMIA GROUP | Všetky práva vyhradené
+</footer>
+
+</body>
+</html>
